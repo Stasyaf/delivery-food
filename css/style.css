@@ -1,0 +1,564 @@
+* {
+    box-sizing: border-box;/*чтоб правильно высчитывались ширина и высота разных элементов*/
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+    padding-top: 44px; /*отступ сверху*/
+}
+
+.container {
+    max-width: 1200px;/*взяли из макета ширина*/
+    margin: auto; /*чтоб всегда находился посередине страницы*/
+}
+
+.header {
+    display: flex;/*все элементы в классе контейнер встали в одну линию*/
+    align-items: center;/*чтоб элементы стояли по вертикали по центру*/
+    justify-content: space-between;/*раскидать контент так чтоб между ними было одинаковое расстояние, лого слева, поиск по середине, кнопки справа*/
+    margin-bottom: 40px;
+}
+
+.input {
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;/*обводка цвет из макета*/
+    border-radius: 2px; /*закругление по краям*/
+    font-size: 16px; /*размер шрифта внутри поля*/
+    line-height: 24px;  /*высота строки*/
+    padding: 8px;
+    padding-left: 35px;  /*чтоб картинка была на расстоянии от текста*/
+    background-repeat: no-repeat; /*чтоб картинка не повторялась*/
+    background-position: left 11px center; /*где находится картинка (слева,расстояние от края 11рх, по центру)*/
+}
+
+.input-address {
+    flex: 0.8;
+    background-image: url(../img/home.svg);/*вставляем картинку*/
+}
+
+.input-search {
+    width: 300px;
+    background-image: url(../img/search.svg);/*вставляем картинку*/
+    margin-left: auto;
+}
+
+/*выравниваем кнопки относительно друг друга*/
+.buttons {
+    display:flex;
+    align-items: center;
+}
+
+/*первая кнопка (корзина)*/
+.button {
+    display: flex;
+    align-items:center;
+    padding: 8px 16px;/*отсупы текста от стенки кнопки вверх/низ 8рх, право/лево 16 рх*/
+    background:#ffffff;/*цвет фона кнопки*/
+    border: 1px solid #d9d9d9;
+    box-sizing:border-box;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);/*затемнение */
+    border-radius: 2px;
+    color: #595959;/*цвет кнопки */
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/*вторая кнопка(войти)*/
+.button-primary {
+    background-color: #1890ff;/*цвет фона кнопки*/
+    border: 1px solid #1890ff;/*цвет обводки кнопки*/
+    color:#fff;/*цвет текста белый*/
+    margin-right: 10px;/*расстояние от кнопки до кнопки*/
+}
+
+.button-icon {
+    margin-right: 6px;/*расстояние от иконки до текста*/
+}
+
+.button-card-text {
+    margin-right: 10px;    
+}
+.promo {
+    box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);/*тень*/
+    background: #FFF1B8 url(../img/promo-image.png) no-repeat top -100px right -247px / 924px;/*вставили картинку, двигаем по высоте,справа, задали ширину*/
+    border-radius: 10px;
+    padding: 68px 70px;
+    margin-bottom: 56px;/*отступ одного блока от другого*/
+}
+
+.promo-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 39px;
+    line-height: 46px;
+    color: #302c34;
+}
+
+.promo-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #302c34;
+    max-width: 538px ;
+}
+
+.main {
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #f5f5f5 100%);
+}
+.section-heading {
+    display: flex;/*относительно друг друга по гор-ли*/
+    align-items: center;/*по вертикали по центру относит друг друга*/
+    margin-bottom: 44px;
+}
+
+.section-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0; /*отключаем лишнии отступы*/
+    color: #000000;
+    margin-right: 30px;
+}
+
+.cards {
+    display:flex;/*все карточки встали по горизонтали*/
+    justify-content: space-between;
+    align-items: flex-start;/*расстояние между карточками*/
+    flex-wrap: wrap;/*если не помещаются в одну строку тогда перенос*/
+}
+
+.card {
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.005);
+    border-radius: 7px;
+    overflow: hidden;/*скрывает все что находится за пределамми карточки и делает скругление*/
+    margin-bottom: 30px;
+    flex-basis: 31%;
+    text-decoration: none;/*убираем подчеркивание*/
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-image {
+    width: 384px;
+    height: 250px;
+   object-fit: cover; /*св-во если картинка не того размера как нам надо,тогда св-во самовысчитвает*/
+}
+
+.card-roll {
+    width: 100%;
+    height: auto;
+    object-fit: scale-down;
+}
+.card-text {
+    padding-top: 20px; /*отступ сверху*/
+    padding-bottom: 35px; /*отступ снизу*/
+    padding-left: 23px; /*отступ по краям*/
+    padding-right: 23px; /*отступ по краям*/
+}
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-title {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.card-title-reg {
+    font-weight: 400;
+    font-size: 18px ;
+    font-weight: bold;
+}
+
+.card-tag {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ffffff;
+    background: #262626;
+    border-radius: 2px;
+    padding: 1px 8px;
+}
+
+.card-info {
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+}
+.ingredients {
+    color: #8c8c8c;
+    word-wrap: break-word;
+    text-align: left;
+    overflow: hidden;
+    
+}
+
+.card-buttons {
+    display: flex;
+    align-items:center;
+    margin-top: 24px;
+}
+.card-price-bold {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    margin-left: 30px;
+}
+.rating {
+    margin-right: 26px;
+    color: #ffc107;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.price, .category {
+    color: #8c8c8c;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.price {
+    margin-right: 10px;
+}
+
+
+
+.category {
+    text-overflow: ellipsis;/*добавляет многоточие*/
+    overflow: hidden;/*обрезает все что не попадает в область*/
+    white-space: nowrap;/*запрет перенос строк*/
+    max-width: 150px;
+}
+
+.price:after {/*cоздаем псевдо-элемент*/
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: #8c8c8c;
+    display: inline-block;/*чтоб появилась точка квадратная*/
+    vertical-align: middle;/*чтоб точка была посередине*/
+    border-radius: 50%;/*скгруление точки чтоб была круглая*/
+    margin-left: 10px;
+}
+
+/*подвал сайта*/
+.footer {
+    padding: 60px 0;
+}
+
+.footer-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-nav {
+    margin-left: 35px;
+    margin-right: auto;
+}
+
+.footer-link {
+    display: inline-block;
+    color: #595959;
+    font-style: normal;
+    font-weight: normal ;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration: none;
+}
+
+/*для всех блоков но кроме последнего*/
+.footer-link:not(:last-child) {
+    margin-right: 15px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
+.social-link:not(:last-child) {
+    margin-right: 21px;
+}
+/*конец подвала сайта*/
+
+/*модальное окно*/
+.modal {
+    position: fixed;/*чтоб всегда было на экране не прокручивалось*/
+    left: 0;/*левый угол*/
+    top: 0;/*вверхний угол*/
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+   /* display: flex;*/
+    display: none; /*чтоб пропадало окно*/
+}
+.is-open {
+    display: flex;
+}
+
+.modal-dialog {
+    max-width: 780px;
+    width: 95%;
+    background:#ffffff;
+    border-radius: 5px;
+    margin: auto;
+    padding: 40px 45px;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+
+/*кнопка закрытия(крестик)*/
+.close {
+    font-size: 36px;
+    border: none;
+    background-color: transparent; /*сделать прозрачным*/
+}
+
+.modal-body {
+    margin-bottom: 52px;
+}
+
+/*список в столбец*/
+.food-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8px;/*чтоб линия была снизу */
+    border-bottom: 1px solid #d9d9d9; /*нижнее подчеркивание серым цветом линия*/
+    margin-bottom: 15px;
+}
+
+.food-name{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.food-price {
+    margin-left: auto;
+    margin-right: 47px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.food-counter {
+    display: flex;
+    align-items: center;
+}
+
+/*кнопки +/-*/
+.counter-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 32px;
+    background: #ffffff;
+    border: 1px solid #40a9ff;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #40a9ff;
+}
+
+.counter {
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*кнопка корзина*/
+.modal-title {
+    margin: 0;/*отключаем все отступы*/
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.modal-footer {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+/*кнопки оформить/отмена*/
+.footer-buttons {
+    display: flex;
+    align-items:center;
+}
+
+/*кнопка общая стоимость*/
+.modal-pricetag {
+    background: #262626;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 15px 20px;
+    font-size: 20px;
+    line-height: 23px;
+}
+/*конец модального окна корзина*/
+
+
+@media (max-width: 1366px) { /*разрешения для ноутбуков*/
+    .container {
+        max-width: 960px;
+    }
+    .promo {
+        background-position: center right -300px;
+        background-size: 750px;
+    }
+    .rating {
+        margin-right: 15px;
+    }
+    .category, .price {
+        font-size: 14px;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+    .promo {
+        padding: 50px;
+        background-size: 500px;
+        background-position: center right -200px;
+    }
+    .promo-text {
+        font-size: 18px;
+        max-width: 400px;
+    }
+    .card {
+        flex-basis: 49%;
+    }
+    .footer-link {
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {/*под маленькие мониторы*/
+    .container {
+        max-width: 560px;
+    }
+    .card-info {
+        flex-wrap: wrap;
+    }
+    .card.rating {
+        flex-basis: 100%;
+    }
+    .card-title {
+        font-size: 18px;
+    }
+    .promo {
+        background-size: 400px;
+        background-position: bottom 50px right -200px;
+    }
+    .promo-title {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+    .promo-text {
+        margin-top: 0;
+    }
+}
+@media (max-width: 578px) {
+    .container {
+        width: 90%;
+    }
+    .header {
+        flex-wrap: wrap;
+    }
+    .input-address {
+        margin-top: 15px;
+        order: 5;
+        flex: 1;
+    }
+    .promo {
+        background-image: none;
+    }
+    .promo-title{
+        margin-bottom: 10px;
+    }
+    .section-title {
+        font-size: 20px;
+    }
+    .card {
+        flex-basis: 100%;
+    }
+    .card-image {
+        width: 100%;
+    }
+    .footer {
+        padding: 30px 0;
+    }
+    .footer-block {
+        align-items: flex-start;
+    }
+    .footer-nav {
+        margin-left: 0;
+        margin-right: 0;
+        order: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-logo {
+        margin-right: 15px;
+        order: 1;
+    }
+    .social-links {
+        order: 2;
+    }
+}
+@media (max-width: 480px) {
+    .button-text {
+        display: none;
+    }
+    .button-icon {
+        margin: 0;
+    }
+    .button {
+        min-height: 40px;
+    }
+    .promo {
+        padding: 20px;
+    }
+    .section-heading {
+        flex-wrap: wrap;
+    }
+    .footer-block {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: сenter;
+    }
+    .footer-logo {
+        order: 0;
+        margin-bottom: 20px;
+    }
+    .footer-nav {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .footer-link:not(:last-child) {
+        margin-right: 0;
+    }
+}

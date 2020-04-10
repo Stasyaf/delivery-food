@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Food - доставка еды на дом</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css"/> <!--Стиль css/весь сайт поднялся вверх к экрану  -->
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <!-- Шапка сайта -->
+   <div class="container">
+       <header class="header">
+           <a href="index.html" class="logo"> <!--логотип-->
+               <img src="img\logo.svg" alt="Logo" />
+           </a>
+           <input type="text" class="input input-address" placeholder="Адрес доставки"><!--строка поля поиска с 2-мя классами-->
+                <div class="buttons">
+                 <!--блок где хранятся две кнопки (войти и корзина)-->
+                    <button class="button button-primary">
+                        <img src="img/user.svg" alt="user" class="button-icon"/>
+                            <span class="button-text">Войти</span>
+                    </button>
+                    <button class="button" id="card-button">  <!--к этой кнопке корзина прописали js не срабатывает-->
+                        <img src="img/shopping-cart.svg" alt="shopping-cart" class="button-icon">
+                            <span class="button-text">Корзина</span>
+                    </button>
+                </div> <!--блок закрывется-->  
+       </header>
+   </div>
+   <!-- ./container -->
+
+
+   <main class="main">
+       <div class="container">
+        <section class="promo">
+            <h1 class="promo-title">Онлайн сервис </br> доставки еды на дом </h1>
+            <p class="promo-text">Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком</p>
+        </section>
+        
+        <section class="restaurants">
+            <div class="section-heading">
+                <h2 class="section-title">Рестораны</h2>
+                <input type="text" class="input input-search" placeholder="Поиск блюд и ресторанов" />
+            </div>
+            <div class="cards">
+                <!--весь блок который имеет много карточек-->
+                <a href="restaurant.html" class="card"> <!--переход на вторую страницу сайта/и т.д.-->
+                    <!--карточка-->
+                    <img src="img/Пиццаплюс.jpg" alt="Пиццаплюс" class="card-image" />
+                    <div class="card-text">
+                        <!--общий блок с текстом-->
+                        <div class="card-heading">
+                            <!--блок с заголовком и время-->
+                            <h3 class="card-title">Пицца плюс</h3>
+                            <!--название ресторана-->
+                            <span class="card-tag tag">50 мин</span>
+                            <!--время доставки-->
+                        </div>
+                        <!--/.card-heading-->
+                        <div class="card-info">
+                            <!--общий блок с информацией /рейтинг/цена/наименование-->
+                            <div class="rating"><img src="img/rating.svg" alt="rating" class="rating-star" /> 4.5</div>
+                            <!--блок с рейтиингом-->
+                            <div class="price">От 900 ₽</div>
+                            <!--блок с ценой-->
+                            <div class="category">Пицца</div>
+                            <!--блок с категорией-->
+                        </div>
+                        <!-- /.card-info -->
+                    </div>
+                </a>
+                <!-- /.card -->
+                <a href="restaurant.html" class="card">
+                    <!--карточка-->
+                    <img src="img/Тануки.jpg" alt="Тануки" class="card-image" />
+                    <div class="card-text">
+                        <!--общий блок с текстом-->
+                        <div class="card-heading">
+                            <!--блок с заголовком и время-->
+                            <h3 class="card-title">Тануки</h3>
+                            <!--название ресторана-->
+                            <span class="card-tag tag">45 мин</span>
+                            <!--время доставки-->
+                        </div>
+                        <!--/.card-heading-->
+                        <div class="card-info">
+                            <!--общий блок с информацией /рейтинг/цена/наименование-->
+                            <div class="rating"><img src="img/rating.svg" alt="rating" class="rating-star" /> 4.2</div>
+                            <!--блок с рейтиингом-->
+                            <div class="price">От 800 ₽</div>
+                            <!--блок с ценой-->
+                            <div class="category">Суши</div>
+                            <!--блок с категорией-->
+                        </div>
+                        <!-- /.card-info -->
+                    </div>
+                </a>
+                <!-- /.card -->
+                <a href="restaurant.html" class="card">
+                    <!--карточка-->
+                    <img src="img/FoodBand.jpg" alt="FoodBand" class="card-image" />
+                    <div class="card-text">
+                        <!--общий блок с текстом-->
+                        <div class="card-heading">
+                            <!--блок с заголовком и время-->
+                            <h3 class="card-title">FoodBand</h3>
+                            <!--название ресторана-->
+                            <span class="card-tag tag">45 мин</span>
+                            <!--время доставки-->
+                        </div>
+                        <!--/.card-heading-->
+                        <div class="card-info">
+                            <!--общий блок с информацией /рейтинг/цена/наименование-->
+                            <div class="rating"><img src="img/rating.svg" alt="rating" class="rating-star" /> 4.0</div>
+                            <!--блок с рейтиингом-->
+                            <div class="price">От 700 ₽</div>
+                            <!--блок с ценой-->
+                            <div class="category">Пицца</div>
+                            <!--блок с категорией-->
+                        </div>
+                        <!-- /.card-info -->
+                    </div>
+                </a>
+                <!-- /.card -->
+                <a href="restaurant.html" class="card">
+                    <!--карточка-->
+                    <img src="img/Жадина.jpg" alt="Жадина" class="card-image" />
+                    <div class="card-text">
+                        <!--общий блок с текстом-->
+                        <div class="card-heading">
+                            <!--блок с заголовком и время-->
+                            <h3 class="card-title">Жадина-роллы</h3>
+                            <!--название ресторана-->
+                            <span class="card-tag tag">55 мин</span>
+                            <!--время доставки-->
+                        </div>
+                        <!--/.card-heading-->
+                        <div class="card-info">
+                            <!--общий блок с информацией /рейтинг/цена/наименование-->
+                            <div class="rating"><img src="img/rating.svg" alt="rating" class="rating-star" /> 4.1 </div>
+                            <!--блок с рейтиингом-->
+                            <div class="price">От 750 ₽</div>
+                            <!--блок с ценой-->
+                            <div class="category">Суши</div>
+                            <!--блок с категорией-->
+                        </div>
+                        <!-- /.card-info -->
+                    </div>
+                </a>
+                <!-- /.card -->
+                <a href="restaurant.html" class="card">
+                    <!--карточка-->
+                    <img src="img/Точкаеды.jpg" alt="Точкаеды" class="card-image" />
+                    <div class="card-text">
+                        <!--общий блок с текстом-->
+                        <div class="card-heading">
+                            <!--блок с заголовком и время-->
+                            <h3 class="card-title">Точка еды</h3>
+                            <!--название ресторана-->
+                            <span class="card-tag tag">40 мин</span>
+                            <!--время доставки-->
+                        </div>
+                        <!--/.card-heading-->
+                        <div class="card-info">
+                            <!--общий блок с информацией /рейтинг/цена/наименование-->
+                            <div class="rating"><img src="img/rating.svg" alt="rating" class="rating-star" /> 3.8</div>
+                            <!--блок с рейтиингом-->
+                            <div class="price">От 600 ₽</div>
+                            <!--блок с ценой-->
+                            <div class="category">Суши</div>
+                            <!--блок с категорией-->
+                        </div>
+                        <!-- /.card-info -->
+                    </div>
+                </a>
+                <!-- /.card -->
+                <a href="restaurant.html" class="card">
+                    <!--карточка-->
+                    <img src="img/PizzaBurger.jpg" alt="PizzaBurger" class="card-image" />
+                    <div class="card-text">
+                        <!--общий блок с текстом-->
+                        <div class="card-heading">
+                            <!--блок с заголовком и время-->
+                            <h3 class="card-title">PizzaBurger</h3>
+                            <!--название ресторана-->
+                            <span class="card-tag tag">60 мин</span>
+                            <!--время доставки-->
+                        </div>
+                        <!--/.card-heading-->
+                        <div class="card-info">
+                            <!--общий блок с информацией /рейтинг/цена/наименование-->
+                            <div class="rating"><img src="img/rating.svg" alt="rating" class="rating-star" /> 4.8</div>
+                            <!--блок с рейтиингом-->
+                            <div class="price">От 900 ₽</div>
+                            <!--блок с ценой-->
+                            <div class="category">Итальянская</div>
+                            <!--блок с категорией-->
+                        </div>
+                        <!-- /.card-info -->
+                    </div>
+                </a>
+                <!-- /.card -->
+            </div>
+            <!-- /.cards -->
+        </section>
+       </div>
+       <!-- ./container -->
+   </main>
+
+   <footer class="footer">
+       <div class="container">
+           <div class="footer-block">
+               <img src="img/logo.svg" alt="logo" class="logo footer-logo">
+               <nav class="footer-nav">
+                   <a href="#" class="footer-link">Ресторанам</a>
+                   <a href="#" class="footer-link">Курьерам</a>
+                   <a href="#" class="footer-link">Пресс-центр</a>
+                   <a href="#" class="footer-link">Контакты</a>
+               </nav>
+               <div class="social-links">
+                    <a href="#" class="social-link"><img src="img/instagram.svg" alt="instagram"></a>
+                    <a href="#" class="social-link"><img src="img/fb.svg" alt="facebook"></a>
+                    <a href="#" class="social-link"><img src="img/vk.svg" alt="vk"></a>
+               </div>
+           </div>
+       </div>
+   </footer>
+   <script src="js/main.js"></script>
+</body>
+</html>
